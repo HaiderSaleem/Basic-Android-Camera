@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/size"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="332dp"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/ham"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@mipmap/ham" />
+
+
+        <TextureView
+            android:id="@+id/textureView"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <Button
+            android:id="@+id/btnCapture"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="170dp"
+            android:background="@mipmap/cap2"
+            android:gravity="center_horizontal|bottom"
+            android:minHeight="32dp"
+            android:minWidth="150dp"
+            android:text="" />
+
+    <Button
+        android:id="@+id/flash"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/btnCapture"
+        android:layout_alignParentStart="true"
+
+        android:background="@mipmap/flash"/>
+
+    <Button
+        android:id="@+id/flip"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/btnCapture"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="14dp"
+        android:layout_gravity="top"
+        android:background="@mipmap/flip"
+
+        android:fitsSystemWindows="true"
+        />
+    </RelativeLayout>
+
+    <include
+        layout="@layout/content_main2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+   <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/activity_main2_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

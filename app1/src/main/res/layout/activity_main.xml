@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    tools:context="com.example.mhaidersaleem.camera.MainActivity">
+
+
+    <TextureView
+        android:id="@+id/textureView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnCapture"
+
+        />
+
+    <Button
+        android:id="@+id/btnCapture"
+        android:text="CAPTURE"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        />
+
+    <Button
+        android:id="@+id/flash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnCapture"
+        android:layout_alignParentStart="true"
+        android:text="Flash"
+        android:background="@android:color/transparent"/>
+    <Button
+        android:id="@+id/flip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnCapture"
+        android:layout_alignParentStart="true"
+        android:text="Flash"
+        android:background="@android:color/transparent"/>
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />
+
+</android.support.v4.widget.DrawerLayout>
